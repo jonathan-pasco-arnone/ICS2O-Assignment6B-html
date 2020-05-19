@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="My 6th webpage">
+    <meta name="keywordss" content="Hello, World! website">
+    <meta name="author" content="Jonathan Pasco-Arnone">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My webpage</title>
+    <link rel="stylesheet" href="mystyle.css">
+  </head>
+  <body>
+    <center>
+    <p class="title" id="title-id">Welcome to Johnny's Pizza Place!</p>
+    <p class="grey-text" id="grey-text-id">You can Order a Large or Extra Large Pizza with up to 4 Toppings</p>
+    <table id="whole-table-id" class="newspaper">
+      <tr class="newspaper">
+        <td class="column1">Large Pizza = $6</td>
+        <td class="column2">
+          <center>
+          <p id="size-question-id">Size of Pizza<br></p>
+          <button class="button-color" id="large-id">Large</button>
+          <button class="button-color" id="extra-large-id">Extra Large</button>
+          </center>
+          </td>
+        <td class="column3">1 topping<br><br><br>2 toppings</td>
+      </tr>
+      <tr>
+        <td class="top-large">Extra Large Pizza = $10</td>
+        <td id="second-choice-id">
+          <center>
+          Number of Toppings
+          <br>
+          <button class="button-color" id="topping-1-id">1</button>
+          <button class="button-color" id="topping-2-id">2</button>
+          <button class="button-color" id="topping-3-id">3</button>
+          <button class="button-color" id="topping-4-id">4</button>
+          <button class="back-button" id="back-id">Back</button>
+          </center>
+        </td>
+        <td><br>3 toppings<br><br><br>4 toppings</td>
+      </tr>
+      <h2 id="answer"></h2>
+    </center>
+    <script>
+      let subtotal = 0;
+      let tax;
+      let total;
+      document.getElementById("second-choice-id").style.visibility="hidden";
+      function large() {
+       subtotal = (+subtotal + 6);
+       document.getElementById("large-id").style.visibility="hidden";
+       document.getElementById("extra-large-id").style.visibility="hidden";
+       document.getElementById("size-question-id").style.visibility="hidden";
+       document.getElementById("second-choice-id").style.visibility="visible";
+      }
+      function extraLarge() {
+       subtotal = (+subtotal + 10);
+       document.getElementById("large-id").style.visibility="hidden";
+       document.getElementById("extra-large-id").style.visibility="hidden";
+       document.getElementById("size-question-id").style.visibility="hidden";
+       document.getElementById("second-choice-id").style.visibility="visible";
+      }
+      function oneTopping() {
+        subtotal = (+subtotal + 1);
+        document.getElementById("second-choice-id").style.visibility="hidden";
+        document.getElementById("whole-table-id").style.visibility="hidden";
+        document.getElementById("grey-text-id").style.visibility="hidden";
+        document.getElementById("title-id").innerHTML = "Thank you for Choosing Johnny's Pizza!";
+        tax = (subtotal *0.13).toFixed(2);
+        total = (+subtotal + +tax).toFixed(2);
+        document.getElementById("answer").innerHTML = ("Subtotal = $" + subtotal + "<br>" + "<br>" + "Tax = $" + tax + "<br>" + "<br>" + "Total = $" + total);
+      }
+      function twoToppings() {
+        subtotal = (+subtotal + 1.75);
+        document.getElementById("second-choice-id").style.visibility="hidden";
+        document.getElementById("whole-table-id").style.visibility="hidden";
+        document.getElementById("grey-text-id").style.visibility="hidden";
+        document.getElementById("title-id").innerHTML = "Thank you for Choosing Johnny's Pizza!";
+        tax = (subtotal *0.13).toFixed(2);
+        total = (+subtotal + +tax).toFixed(2);
+        document.getElementById("answer").innerHTML = ("Subtotal = $" + subtotal + "<br>" + "<br>" + "Tax = $" + tax + "<br>" + "<br>" + "Total = $" + total);
+      }
+      function threeToppings() {
+        subtotal = (+subtotal + 2.5);
+        document.getElementById("second-choice-id").style.visibility="hidden";
+        document.getElementById("whole-table-id").style.visibility="hidden";
+        document.getElementById("grey-text-id").style.visibility="hidden";
+        document.getElementById("title-id").innerHTML = "Thank you for Choosing Johnny's Pizza!";
+        tax = (subtotal *0.13).toFixed(2);
+        total = (+subtotal + +tax).toFixed(2);
+        document.getElementById("answer").innerHTML = ("Subtotal = $" + subtotal + "<br>" + "<br>" + "Tax = $" + tax + "<br>" + "<br>" + "Total = $" + total);
+      }
+      function fourToppings() {
+        subtotal = (+subtotal + 3.35);
+        document.getElementById("second-choice-id").style.visibility="hidden";
+        document.getElementById("whole-table-id").style.visibility="hidden";
+        document.getElementById("grey-text-id").style.visibility="hidden";
+        document.getElementById("title-id").innerHTML = "Thank you for Choosing Johnny's Pizza!";
+        tax = (subtotal *0.13).toFixed(2);
+        total = (+subtotal + +tax).toFixed(2);
+        document.getElementById("answer").innerHTML = ("Subtotal = $" + subtotal + "<br>" + "<br>" + "Tax = $" + tax + "<br>" + "<br>" + "Total = $" + total);
+      }
+      function back() {
+      document.getElementById("large-id").style.visibility="visible";
+       document.getElementById("extra-large-id").style.visibility="visible";
+       document.getElementById("size-question-id").style.visibility="visible";
+       document.getElementById("second-choice-id").style.visibility="hidden";
+       subtotal = (subtotal * 0);
+      }
+      document.getElementById("large-id").addEventListener("click",large);
+      document.getElementById("extra-large-id").addEventListener("click",extraLarge);
+      document.getElementById("topping-1-id").addEventListener("click",oneTopping);
+      document.getElementById("topping-2-id").addEventListener("click",twoToppings);
+      document.getElementById("topping-3-id").addEventListener("click",threeToppings);
+      document.getElementById("topping-4-id").addEventListener("click",fourToppings);
+      document.getElementById("back-id").addEventListener("click",back);
+    </script>
+  </body>
+</html>

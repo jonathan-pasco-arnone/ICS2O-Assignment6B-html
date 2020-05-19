@@ -1,0 +1,25 @@
+.column1 {
+    padding-left: 250px;
+    padding-right: 250px;
+    width: 100%;
+}
+.column2 {
+    padding-left: 250px;
+    padding-right: 250px;
+    width: ;
+}
+.column3 {
+    padding-left: 250px;
+    padding-right: 250px;
+    width: 100px;
+}
+
+
+
+
+
+
+
+    
+    
+    <p class="newspaper">Large Pizza = $6      button stuff     1 topping</p>

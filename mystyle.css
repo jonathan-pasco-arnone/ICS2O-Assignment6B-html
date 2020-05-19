@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+body {
+    background-image: url("./Images/pizza-place.PNG");
+}
+.title {
+    font-family: 'Caveat';
+    font-size: 150px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.grey-text {
+    color: grey;
+    margin-top: 0;
+    font-size: 50px;
+}
+.column1 {
+    padding-right: 150px;
+    column-span: all;
+}
+.column2 {
+    padding-left: 400px;
+    padding-right: 400px;
+    column-span: all;
+}
+.column3 {
+    margin-right: 0px;
+    text-align: right;
+    column-span: all;
+}
+.top-large {
+    padding-top: 200px
+}
+.newspaper {
+    font-size: 35px;
+}
+.button-color {
+    background-color: orange;
+    border-color: #e89133;
+}
+.back-button {
+    background-color: #ffc170;
+    border-color: #e89133;
+}
